@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "8382bb86-bf1a-403e-9b85-f69899ffa2b0",
+		"name": "Fieelements Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16396568"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Add Employee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "BasicAuth",
+								"value": "1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Akshat Tomar\",\r\n    \"email\":\"akki87@gmail.com\",\r\n    \"phone\":\"7697210935\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Employee success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "BasicAuth",
+										"value": "1234",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Akshat Tomar\",\r\n    \"email\":\"akki88@gmail.com\",\r\n    \"phone\":\"7697210935\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "390"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"186-uoKHJN+8IdS+FMhlTDCjT3IAE5g\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 18:11:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"employee\": {\n        \"name\": \"Akshat Tomar\",\n        \"email\": \"akki88@gmail.com\",\n        \"phone\": 7697210935,\n        \"createdAt\": \"2023-03-06T18:11:16.137Z\",\n        \"updatedAt\": \"2023-03-06T18:11:16.137Z\",\n        \"id\": \"64062cc458a3d139f7023ff8\"\n    },\n    \"transaction\": {\n        \"transactionType\": \"addEmployee\",\n        \"employeeId\": \"64062cc458a3d139f7023ff8\",\n        \"createdAt\": \"2023-03-06T18:11:16.182Z\",\n        \"updatedAt\": \"2023-03-06T18:11:16.182Z\",\n        \"id\": \"64062cc458a3d139f7023ffa\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Empoyee By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "BasicAuth",
+								"value": "1234",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/employee/64062cc458a3d139f7023ff8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee",
+								"64062cc458a3d139f7023ff8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Empoyee By Id success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "BasicAuth",
+										"value": "1234",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employee/64062cc458a3d139f7023ff8",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"64062cc458a3d139f7023ff8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "394"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18a-clATCwV5166WzVNhF+3CcCuiGKI\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 18:12:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"employee\": {\n        \"name\": \"Akshat Tomar\",\n        \"email\": \"akki88@gmail.com\",\n        \"phone\": 7697210935,\n        \"createdAt\": \"2023-03-06T18:11:16.137Z\",\n        \"updatedAt\": \"2023-03-06T18:11:16.137Z\",\n        \"id\": \"64062cc458a3d139f7023ff8\"\n    },\n    \"transaction\": {\n        \"transactionType\": \"getEmployeeById\",\n        \"employeeId\": \"64062cc458a3d139f7023ff8\",\n        \"createdAt\": \"2023-03-06T18:12:01.470Z\",\n        \"updatedAt\": \"2023-03-06T18:12:01.470Z\",\n        \"id\": \"64062cf158a3d139f7023ffe\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Employees",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "BasicAuth",
+								"value": "1234",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/employee",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6405eba821c9e91643f0186a",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Employees success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "BasicAuth",
+										"value": "1234",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employee",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "6405eba821c9e91643f0186a",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "phone",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "647"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"287-PJxEJjdcWo71GnoabV4Ml/4TmQk\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 18:12:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": {\n        \"data\": [\n            {\n                \"employee\": {\n                    \"name\": \"Akshat Tomar\",\n                    \"email\": \"akki88@gmail.com\",\n                    \"phone\": 7697210935,\n                    \"createdAt\": \"2023-03-06T18:11:16.137Z\",\n                    \"updatedAt\": \"2023-03-06T18:11:16.137Z\",\n                    \"id\": \"64062cc458a3d139f7023ff8\"\n                }\n            },\n            {\n                \"employee\": {\n                    \"name\": \"Akshat Tomar\",\n                    \"email\": \"akki87@gmail.com\",\n                    \"phone\": 7697210935,\n                    \"createdAt\": \"2023-03-06T18:12:32.669Z\",\n                    \"updatedAt\": \"2023-03-06T18:12:32.669Z\",\n                    \"id\": \"64062d1058a3d139f7024000\"\n                }\n            }\n        ],\n        \"pagination\": {\n            \"offset\": 0,\n            \"total\": 2,\n            \"count\": 2,\n            \"limit\": -1\n        }\n    },\n    \"transaction\": {\n        \"transactionType\": \"getAllEmployees\",\n        \"employeeId\": \"All\",\n        \"createdAt\": \"2023-03-06T18:12:46.099Z\",\n        \"updatedAt\": \"2023-03-06T18:12:46.099Z\",\n        \"id\": \"64062d1e58a3d139f7024006\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Employee By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "BasicAuth",
+								"value": "1234",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Sachin\",\r\n    \"email\":\"sachin@gmail.com\",\r\n    \"phone\":\"7894621358\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/employee/64062cc458a3d139f7023ff8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee",
+								"64062cc458a3d139f7023ff8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Employee By Id success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "BasicAuth",
+										"value": "1234",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Sachin\",\r\n    \"email\":\"sachin@gmail.com\",\r\n    \"phone\":\"7894621358\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/employee/64062cc458a3d139f7023ff8",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"64062cc458a3d139f7023ff8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "391"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"187-5eBv6CXlSLSCU4E3LczcTa/qQls\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 18:13:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"employee\": {\n        \"name\": \"Sachin\",\n        \"email\": \"sachin@gmail.com\",\n        \"phone\": 7894621358,\n        \"createdAt\": \"2023-03-06T18:11:16.137Z\",\n        \"updatedAt\": \"2023-03-06T18:13:16.873Z\",\n        \"id\": \"64062cc458a3d139f7023ff8\"\n    },\n    \"transaction\": {\n        \"transactionType\": \"updateEmployeeById\",\n        \"employeeId\": \"64062cc458a3d139f7023ff8\",\n        \"createdAt\": \"2023-03-06T18:13:16.900Z\",\n        \"updatedAt\": \"2023-03-06T18:13:16.900Z\",\n        \"id\": \"64062d3c58a3d139f702400a\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Employee By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "BasicAuth",
+								"value": "1234",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/employee/64062cc458a3d139f7023ff8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"employee",
+								"64062cc458a3d139f7023ff8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Employee By Id success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "BasicAuth",
+										"value": "1234",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/employee/64062cc458a3d139f7023ff8",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"employee",
+										"64062cc458a3d139f7023ff8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-uWzCzyrXC2YslKYZZP5ZyYs+gKg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 06 Mar 2023 18:13:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"transactionType\": \"deleteEmployeeById\",\n    \"employeeId\": \"64062cc458a3d139f7023ff8\",\n    \"createdAt\": \"2023-03-06T18:13:42.032Z\",\n    \"updatedAt\": \"2023-03-06T18:13:42.032Z\",\n    \"id\": \"64062d5658a3d139f702400d\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

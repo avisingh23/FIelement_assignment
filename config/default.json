@@ -1,0 +1,17 @@
+{
+    "app": {
+        "name": "App01",
+        "apiPrefix": "",
+        "port": 3000,
+        "basicAuth": "",
+        "mongodb": {
+            "uri": "mongodb://localhost:27017",
+            "db": "fielements_assignment",
+            "debug": true
+        },
+        "auth": {
+            "secretKey": "",
+            "expiration": 3600
+        }
+    }
+}
